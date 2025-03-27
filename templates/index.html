@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Download de Vídeos</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Trex Tube</h1>
+        <br>
+        <h2>Download de Vídeos e Músicas</h2>
+    </header>
+    <div class="container">
+        <!-- Exibir mensagens flash -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul>
+                    {% for category, message in messages %}
+                        <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST">
+            <label for="url">URL do Vídeo:</label><br>
+            <input type="text" id="url" name="url" required><br><br>
+
+            <label for="format">Formato:</label><br>
+            <select id="format" name="format">
+                <option value="mp4">Vídeo (MP4)</option>
+                <option value="mp3">Áudio (MP3)</option>
+            </select><br><br>
+
+            <input type="submit" value="Baixar">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, rgb(67, 230, 164), rgb(50, 150, 200)); /* Gradiente de fundo */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Organiza os itens verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: flex-start; /* Garante que o conteúdo fique no topo */
+}
+
+header {
+    width: 100%; 
+    display: flex;
+    flex-direction: column; /* Isso faz com que os elementos fiquem em coluna (um embaixo do outro) */
+    justify-content: center; /* Centraliza o conteúdo na vertical */
+    align-items: center; /* Centraliza na horizontal */
+    padding: 20px;
+    background-color: transparent;
+    box-sizing: border-box;
+    margin-top: 100px; /* Espaçamento adicional se necessário */
+}
+
+header h1 {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 3rem;
+    margin: 0; /* Remove qualquer margem extra */
+}
+
+header h2 {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white; /* Cor do texto */
+    font-size: 1.5rem; /* Tamanho do texto */
+    margin-top: 10px; /* Distância entre o h1 e o h2 */
+}
+
+.container {
+    margin-top: 20px; /* Adiciona um pequeno espaço abaixo do header */
+    margin-bottom: 20px; /* Garantir que tenha algum espaço abaixo também */
+    position: absolute; /* Centraliza o container no meio da tela */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta para que o centro real do elemento fique no meio da tela */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}   
+
+label {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: large;
+}
+
+/* Estilo dos inputs e botões */
+input[type="text"], select, input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    border: none; /* Remove qualquer borda padrão do input */
+    outline: none; /* Remove o contorno (quando o input é focado) */
+    padding: 10px 20px; /* Ajuste o tamanho do botão */
+    background-color: #18ad25; /* Cor de fundo do botão */
+    color: white; /* Cor do texto no botão */
+    border-radius: 5px; /* Borda arredondada para o botão */
+    cursor: pointer; /* Adiciona um cursor de mão ao passar sobre o botão */
+    font-size: 16px; /* Ajuste do tamanho da fonte, se necessário */
+}
+
+input[type="submit"]:hover {
+    background-color: #38b88c; /* Cor de fundo quando o botão é passado com o mouse */
+}
+
+/* Estilo das mensagens flash */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #f2dede;
+    color: #a94442;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
